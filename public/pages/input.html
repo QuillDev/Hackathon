@@ -1,0 +1,76 @@
+<header>
+    <link rel="stylesheet" href="../styles/w3.css">
+    <link rel="stylesheet" href="../styles/hackathon.css">
+    <link rel="stylesheet" href="../styles/switch.css">
+    <script src="../databaseInput.js"></script>
+</header>
+
+
+<body>
+    <title>Register an Opportunity</title>
+    <div class="w3-container ncssm-blue">
+        <h2>Scholarship Registry</h2>
+        <button class="w3-button backButton" type="button" onclick="window.location.href = '../index.html'">Back</button>
+      </div>      
+    <form class="w3-container" id="inputForm" action="/register" method="post">
+        <p>
+            <label>Opportunity Name: </label>
+            <input class="w3-input" type="text" id="orgInput" name="opname"></p>
+        <p>
+            <label> Opportunity Type: </label>
+            <input class = "w3-radio" type="radio" name="oppType" value = "True"> Scholarship
+            <input class = "w3-radio" type="radio" name="oppType" value = "False"> Summer Opportunity
+        </p>
+        <p>
+            <label> Sponsoring Organization: </label>
+            <input class="w3-input" type="text" id="sponsorInput"></p>
+        <p>
+            <label> Application Deadline: </label> <input class="w3-input " type="date" id="appInput"></p>
+            <label> Start Date: </label> <input class="w3-input " type="date" id="startInput"></p>
+            <label> End Date:   </label> <input class="w3-input " type="date" id="endInput"></p>
+        <p>
+            <label>Website URL: </label>
+            <input class="w3-input" type="text" name="website" id="websiteInput"></p>
+        </p>
+        <p>
+            <label>Restrictions: </label>
+            <input class="w3-input" type="text" id="restrictionInput">
+        </p>
+        <p>
+            <label>Description: </label>
+            <input class="w3-input" type="text" id="descriptionInput">
+        </p>
+
+        <!-- Switch Boxes For Grade Levels -->
+        <div class = "gradeLevel">
+            <b1 style="font-size:20px">9th</b1>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+
+            <b1 style="font-size:20px">10th</b1>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+
+            <b1 style="font-size:20px">11th</b1>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            
+            <b1 style="font-size:20px">12th</b1>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+
+        </div>
+        
+      </form>
+      
+      
+      <button id="submitButton" class="w3-button ncssm-blue" style="width:100%;" onclick="addValue();"> Submit </button>
+</body>
