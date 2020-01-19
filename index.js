@@ -59,14 +59,11 @@ app.post('/pages/input', (req, res) => {
 var query;
 //get the data from the search bar thing
 app.post('/pages/search', (req, res) => {
-  query = req.body.data;
-  console.log(req.body.data);
-  res.send(req.body.data);
 });
 
 //Get information from the mongodb database and print it to the page
 app.get('/pages/search', (req, res) => {
-  //{ $text: { $search: query } }
+  console.log(query);
   db.collection('opps').find().toArray((err, result) => {
     if (err) return console.log(err);
     res.send(result);
